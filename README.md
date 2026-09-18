@@ -1,4 +1,4 @@
-# Project made with C
+# Projects made with C
 ![brain-made label](imgs/88x31-light.png)
 
 Board games and c libraries for arena allocators, dynamic arrays, dynamic hash tables and linked-list based queues. The board games and queue library were written in portuguese.
