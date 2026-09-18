@@ -23,6 +23,8 @@ void enfileirar(Fila *fila, int valor);
 void imprimir_fila(Fila *fila);
 void destruir_fila(Fila *fila);
 
+#endif // FILA_H
+
 #ifdef FILA_IMPLEMENTACAO
 
 bool fila_vazia(const Fila *fila) {
@@ -100,4 +102,3 @@ void destruir_fila(Fila *fila) {
 }
 #endif // FILA_IMPLEMENTACAO
 
-#endif // FILA_H
