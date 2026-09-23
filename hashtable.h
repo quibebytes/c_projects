@@ -1,8 +1,8 @@
 /*
 
-This is a stb-style library and as such needs ARENA_IMPLEMENTATION
+This is a stb-style library and as such needs HASHTABLE_IMPLEMENTATION
 to be defined somewhere for the function definitions to show up.
-More information for stb-style libraries here:
+More information on stb-style libraries here:
 https://github.com/nothings/stb#faq
 
 This library uses custom int type names for convenience,
