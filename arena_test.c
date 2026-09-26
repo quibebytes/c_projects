@@ -24,7 +24,7 @@ void print_memory16(unsigned char *memory, size_t size) {
     fflush(stdout);
 }
 
-int main () {
+int main(void) {
     puts("Sparse memory stuff - Use a task manager to see the memory used or reserved");
     fflush(stdout);
 
@@ -35,7 +35,7 @@ int main () {
     getchar();
 
     const char things[] = "The angles you don't plan for, the things you might have missed, those things exist.";
-    char *things2;
+    char *things2 = NULL;
 
     for (size_t i = 0; i < 1024LL * 1024LL; i++) {
         things2 = (char *) arena_allocate(&sparse, sizeof(things));
@@ -48,9 +48,16 @@ int main () {
     char *things3 = (char *) arena_resize(&sparse, things2, sizeof(things), 4096);
     assert(things3);
     getchar();
-    puts("cleared arena");
     fflush(stdout);
     arena_clear(&sparse);
+    puts("cleared arena");
+    getchar();
+    puts("memory when allocating without modifying.");
+    char *things4 = NULL;
+    for (size_t i = 0; i < 1024LL * 1024LL; i++) {
+        things4 = arena_allocate(&sparse, sizeof(things));
+    }
+    print_memory16(sparse.buffer, 256);
     getchar();
 
     return 0;
